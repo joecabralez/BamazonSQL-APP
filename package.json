@@ -1,0 +1,31 @@
+{
+  "name": "bamazonsql-app",
+  "version": "1.0.0",
+  "description": "bamazon app using mysql",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joecabralez/BamazonSQL-APP.git"
+  },
+  "keywords": [
+    "bamazon",
+    "sql",
+    "amazon",
+    "products",
+    "inventory"
+  ],
+  "author": "Joe Cabralez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joecabralez/BamazonSQL-APP/issues"
+  },
+  "homepage": "https://github.com/joecabralez/BamazonSQL-APP#readme",
+  "dependencies": {
+    "console.table": "^0.8.0",
+    "inquirer": "^3.0.6",
+    "mysql": "^2.13.0"
+  }
+}
