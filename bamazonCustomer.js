@@ -1,6 +1,5 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
-var clear = require("clear");
 require("console.table");
 
 // create the connection information for the sql database
@@ -21,6 +20,7 @@ connection.connect(function(err) {
   if (err) throw err;
 });
 
+//start it up
 var start = function () {
   connection.query("SELECT * FROM products", function(err, res) {
   if (err) throw err;
@@ -35,17 +35,17 @@ var start = function () {
 };
 
 var buyItem = function() {
-  // query the database for all items being auctioned
+  // query the database & products table
   connection.query("SELECT * FROM products", function(err, results) {
     if (err) throw err;
-    // once you have the items, prompt the user for which they'd like to buy
+    // user selects item_id
     inquirer.prompt([
       {
         name: "idSelected",
         type: "input",
         message: "Choose the ID of the item you would like to buy!"
       },
-    // inquire how many theyd like to buy
+    // quantity of item
       {
         name: "quantitySelected",
         type: "input",
