@@ -29,13 +29,13 @@ var start = function () {
         var row = [res[i].item_id, res[i].product_name, res[i].department_name, res[i].price,res[i].stock_quantity];
         table.push(row);
     }
-    console.table(["ID","Item", "Department", "Price", "Stock"],table);
+    console.table(["Item ID","Product Name", "Department Name", "Price", "Stock Quantity"],table);
   });
   buyItem();
 };
 
 var buyItem = function() {
-  // query the database & products table
+  // select from the database & products table
   connection.query("SELECT * FROM products", function(err, results) {
     if (err) throw err;
     // user selects item_id
@@ -43,7 +43,7 @@ var buyItem = function() {
       {
         name: "idSelected",
         type: "input",
-        message: "Choose the ID of the item you would like to buy!"
+        message: "Choose the ID of the product you would like to buy!"
       },
     // quantity of item
       {
@@ -67,7 +67,7 @@ var buyItem = function() {
                 }], function(error) {
                 if (error) throw err;
                 console.log("------------------------------");
-                console.log("Item purchased.");
+                console.log("Product purchased.");
                 console.log("------------------------------");
                 });
             }
