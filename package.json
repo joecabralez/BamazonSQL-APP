@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/joecabralez/BamazonSQL-APP#readme",
   "dependencies": {
+    "clear": "0.0.1",
+    "cli-table": "^0.3.1",
     "console.table": "^0.8.0",
     "inquirer": "^3.0.6",
     "mysql": "^2.13.0"
